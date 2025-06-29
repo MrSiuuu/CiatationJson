@@ -1,5 +1,6 @@
 <script setup>
 import { RouterView, RouterLink } from 'vue-router';
+import franchiLogo from './assets/franchi.png';
 </script>
 
 <template>
@@ -13,7 +14,10 @@ import { RouterView, RouterLink } from 'vue-router';
     <div class="bg-white shadow-sm">
       <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
         <div class="flex flex-col md:flex-row w-full max-w-4xl justify-between items-center">
-          <h1 class="text-2xl font-bold text-gray-900 mb-4 md:mb-0">Générateur de Citations</h1>
+          <div class="flex items-center space-x-3 mb-4 md:mb-0">
+            <img :src="franchiLogo" alt="Logo" class="h-10 w-10 object-contain rounded-full shadow" />
+            <h1 class="text-2xl font-bold text-gray-900">Générateur de Citations</h1>
+          </div>
           <nav class="flex space-x-8">
             <RouterLink to="/" class="text-gray-600 hover:text-blue-600 transition-colors">Accueil</RouterLink>
             <RouterLink to="/add" class="text-gray-600 hover:text-blue-600 transition-colors">Ajouter une citation</RouterLink>
